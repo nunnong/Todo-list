@@ -1,13 +1,48 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Slate */
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+
+  /* Violet */
+  --violet-600: #7c3aed;
+  --violet-100: #ede9fe;
+
+  /* Rose */
+  --rose-500: #f43f5e;
+
+  /* Lime */
+  --lime-300: #bef264;
+
+  /* Amber */
+  --amber-800: #92400e;
+
+  /*
+     Typography
+     - rem 단위 사용 (접근성)
+     - 기준: 16px = 1rem
+     - 사용법: font-size: var(--font-size-lg);
+  */
+
+  /* Font Size */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-base: 1rem; /* 16px */
+
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -17,26 +52,14 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: var(--font-nanum), sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--slate-900);
+  background-color: var(--slate-100);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
