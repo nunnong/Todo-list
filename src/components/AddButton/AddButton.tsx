@@ -1,7 +1,7 @@
 import PlusGrayIcon from "@public/icons/plus_gray.svg";
 
 interface AddButtonProps {
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 export default function AddButton({ onClick }: AddButtonProps) {
