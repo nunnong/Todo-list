@@ -17,14 +17,14 @@ const LABELS = {
 
 const COLORS = {
   add: { default: "bg-slate-200 text-slate-900", active: "bg-violet-600 text-white" },
-  delete: { default: "bg-rose-500 text-white" },
+  delete: { default: "bg-rose-500 text-white", active: "bg-rose-500 text-white" },
   edit: { default: "bg-slate-200 text-slate-900", active: "bg-lime-300 text-slate-900" },
 } as const;
 
 export default function Button({ type, size = "large", state = "default", onClick }: ButtonProps) {
   const Icon = ICONS[type];
   const isLarge = size === "large";
-  const colorClass = COLORS[type][type === "delete" ? "default" : state];
+  const colorClass = COLORS[type][state];
   const shadowOffset = isLarge ? "translate-x-[3.65px]" : "translate-x-[1.22px]";
 
   return (
